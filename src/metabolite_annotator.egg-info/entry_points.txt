@@ -1,0 +1,2 @@
+[console_scripts]
+metabolite_annotator = metabolite_annotator.cli:main
