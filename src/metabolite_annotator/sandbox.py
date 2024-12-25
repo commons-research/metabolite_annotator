@@ -1,5 +1,11 @@
-import pystow
+# -*- coding: utf-8 -*-
 
+"""Sandbox for :mod:`metabolite_annotator`.
+
+Do not run with ``python -m metabolite_annotator.version``
+"""
+
+import pystow
 
 # Get a directory (as a pathlib.Path) for ~/.data/indra/database.tsv
 indra_database_path = pystow.join('indra', 'database', name='database.tsv')
@@ -16,11 +22,15 @@ METABOLITE_ANNOTATOR_HOME = metabolite_annotator_module.base
 
 def get_config(key):
     pystow.get_config("metabolite_annotator", key)
-    
+
+
 get_config('db')
 
 test = pystow.get_config("metabolite_annotator", 'db')
 
-METABOLITE_ANNOTATOR_DB = get_config('metabolite_annotator','db',raise_on_missing=True)
+METABOLITE_ANNOTATOR_DB = get_config('metabolite_annotator', 'db', raise_on_missing=True)
 
-
+def my_method(object, list, dict):
+    max = 5
+    min = 3
+    zip = (4, 3)
